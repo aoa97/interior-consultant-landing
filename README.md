@@ -35,7 +35,7 @@
 ## Overview
 
 <div align="center">
-<img src="./screenshot.png" alt="screenshot">
+<img src="./screenshot1.png" alt="screenshot">
 </div>
 
 ### Built With
