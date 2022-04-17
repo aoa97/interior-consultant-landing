@@ -1,0 +1,48 @@
+@mixin container {
+  margin: 0 auto;
+  padding: 15px;
+
+  // Extra Small Screens (Mobile)
+  @include respond(xs) {
+    width: auto;
+  }
+
+  // Small Screens (Tablets)
+  @include respond(sm) {
+    width: 750px;
+  }
+
+  // Medium Screens
+  @include respond(md) {
+    width: 970px;
+  }
+
+  // Large Screens
+  @include respond(lg) {
+    width: 1170px;
+  }
+}
+
+@mixin respond($screen) {
+  @if $screen == xs {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $screen == sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $screen == md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $screen == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $screen == not-xs {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
